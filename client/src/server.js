@@ -1,22 +1,14 @@
-const amqp = require('amqp');
-const connection = amqp.createConnection({ host: 'localhost' });
-
-// add this for better debuging
-connection.on('error', function(e) {
-    console.log("Error from amqp: ", e);
-});
-
-// Wait for connection to become established.
-connection.on('ready', () => {
-    // Use the default 'amq.topic' exchange
-    connection.queue('post-proxy', q => {
-        // Catch all messages
-        q.bind('#');
-
-        // Receive messages
-        q.subscribe(message => {
-            // Print messages to stdout
-            console.log(message);
-        });
-    });
+require('seneca')()
+.use('seneca-amqp-transport')
+.add('cmd:proxy', (req, done) => {
+  console.log(req.message);
+  return done(null, {
+    ok: true,
+    when: Date.now()
+  });
+})
+.listen({
+  type: 'amqp',
+  pin: 'cmd:proxy',
+  url: 'amqo://localhost:5672'
 });

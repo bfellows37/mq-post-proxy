@@ -5,11 +5,13 @@
   "main": "./src/server.js",
   "scripts": {
     "test": "mocha test",
-    "server": "node ./src/server.js"
+    "server": "nodemon ./src/server.js"
   },
   "author": "bfellows@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "amqp": "^0.2.6"
+    "amqp": "^0.2.6",
+    "seneca": "^3.3.0",
+    "seneca-amqp-transport": "^2.1.0"
   }
 }
