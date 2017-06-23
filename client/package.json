@@ -2,10 +2,14 @@
   "name": "mq-post-proxy-client",
   "version": "0.0.0",
   "description": "post proxy client",
-  "main": "server.js",
+  "main": "./src/server.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha test",
+    "server": "node ./src/server.js"
   },
   "author": "bfellows@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "amqp": "^0.2.6"
+  }
 }

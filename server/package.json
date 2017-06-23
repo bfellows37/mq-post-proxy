@@ -2,10 +2,15 @@
   "name": "mq-post-proxy-server",
   "version": "0.0.0",
   "description": "message-queue post proxying server",
-  "main": "server.js",
+  "main": "./src/server.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha test",
+    "server": "node ./src/server.js"
   },
   "author": "bfellows@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "dotenv-safe": "^4.0.4",
+    "express": "^4.15.3"
+  }
 }
