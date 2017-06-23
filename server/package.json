@@ -1,0 +1,11 @@
+{
+  "name": "mq-post-proxy-server",
+  "version": "0.0.0",
+  "description": "message-queue post proxying server",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "author": "bfellows@gmail.com",
+  "license": "MIT"
+}

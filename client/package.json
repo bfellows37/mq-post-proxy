@@ -1,0 +1,11 @@
+{
+  "name": "mq-post-proxy-client",
+  "version": "0.0.0",
+  "description": "post proxy client",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "author": "bfellows@gmail.com",
+  "license": "MIT"
+}
